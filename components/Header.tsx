@@ -55,7 +55,7 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div className="flex md:hidden gap-x-2 items-center">
                <button className=" rounded-full p-2 flex bg-white items-center justify-center hover:opacity-75 transition">
-                  <Button onClick={() => router.push('/home')}>
+                  <Button onClick={() => router.push('/')}>
                      <HiHome className="text-black" size={20} />
                   </Button>
                </button>
