@@ -101,7 +101,12 @@ const PlayerContent: React.FC<PlayerContentProps> = ({ song, songUrl }) => {
       }
    }
 
-   const handleSeek = () => { };
+   const handleSeek = useCallback((value: number): void => {
+      setCurrentPosition(value);
+      if (sound) {
+        sound.seek(value);
+      }
+    }, [sound]);
 
    const toggleMute = () => {
       if (volume === 0) {

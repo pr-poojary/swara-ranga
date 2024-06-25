@@ -55,22 +55,26 @@ const Header: React.FC<HeaderProps> = ({
             </div>
             <div className="flex md:hidden gap-x-2 items-center">
                <button className=" rounded-full p-2 flex bg-white items-center justify-center hover:opacity-75 transition">
-                  <HiHome className="text-black" size={20} />
+                  <Button onClick={() => router.push('/home')}>
+                     <HiHome className="text-black" size={20} />
+                  </Button>
                </button>
                <button className=" rounded-full p-2 flex bg-white items-center justify-center hover:opacity-75 transition">
-                  <BiSearch className="text-black" size={20} />
+                  <Button onClick={() => router.push('/search')}>
+                     <BiSearch className="text-black" size={20} />
+                  </Button>
                </button>
             </div>
             <div className="flex justify-between items-center gap-x-4">
                {user ? (
                   <div className="flex gap-x-4 items-center">
-                  <Button onClick={handleLogout} className="bg-white px-6 py-2">
-                     Logout
-                  </Button>
-                  <Button onClick={() => router.push('/account')}>
-                     <FaUserAlt />
-                  </Button>
-               </div>
+                     <Button onClick={handleLogout} className="bg-white px-6 py-2">
+                        Logout
+                     </Button>
+                     <Button onClick={() => router.push('/account')}>
+                        <FaUserAlt />
+                     </Button>
+                  </div>
                ) : (
                   <>
                      <div>
